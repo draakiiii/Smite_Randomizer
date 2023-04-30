@@ -1,0 +1,35 @@
+<div class="root_home_component">
+    <div class="home_body center">
+        <div class="home_body_content text-center">
+            <h1>Smite Randomizer</h1>
+            <div class="randomGod_container container text-center">
+                <div class="row align-items-center">
+                  <div class="col center">
+                    <p class="name"> {{ godName + " -"}} </p>
+                    <p class="role" [ngClass]="roleName"> {{ roleName }} </p>
+                  </div>
+                  <div class="col text-left">
+                    <form action="">
+                        <label for="" class="form-label">Select role:</label>
+                        <div class="row">
+                            <div class="col">
+                                <select name="" id="" class="form-control" #mySelect (change)="onRoleSelect(mySelect.value)">
+                                    <option value="All">All</option>
+                                    <option value="Mage">Mage</option>
+                                    <option value="Hunter">Hunter</option>
+                                    <option value="Assassin">Assassin</option>
+                                    <option value="Warrior">Warrior</option>
+                                    <option value="Guardian">Guardian</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn" (click)="onRoleSelect(mySelect.value)">Random</button>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
